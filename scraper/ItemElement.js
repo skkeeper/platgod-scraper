@@ -3,7 +3,7 @@ const ItemElement = function (el) {
 };
 
 function cleanString(str) {
-  return str.replace(/ +(?= )/g, '').replace(/\n/g, '');
+  return str.replace(/ +(?= )/g, '').replace(/\n/g, ' ');
 }
 
 /**

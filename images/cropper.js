@@ -28,13 +28,13 @@ module.exports = {
           const clone = handler.clone();
           const dimension = subImages[i];
 
+          log.child(dimension).debug('Cropping ' + dimension.filename);
           clone.crop(
-            handler.bitmap.width - dimension.x,
+            dimension.x * -1,
             dimension.y,
             dimension.width,
             dimension.height);
 
-          log.child(dimension).debug('Cropping ' + dimension.filename);
           clone.resize(dimension.width, dimension.height).write(`${outputDirectory}/${dimension.filename}.png`);
         }
 

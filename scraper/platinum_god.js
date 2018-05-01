@@ -20,10 +20,10 @@ const cssFile = `${baseUrl}/assets/main.css`;
 const itemImages = {
   'r-itm': 'rebirth-items.png',
   'a-itm': 'ab-items6.png',
-  'ap-itm': 'ap-items8.png',
+  'ap-itm': 'ap-items9.png',
   'r-junxx': 'rebirth-trinket-final.png',
   'a-junxx': 'ab-trinkets4.png',
-  'ap-junxx': 'ap-trinkets7.png',
+  'ap-junxx': 'ap-trinkets8.png',
   'r-card': 'ap-cards1.png'
 };
 
