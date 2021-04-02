@@ -26,6 +26,8 @@ ConsumableElement.prototype.getUnlockCondition = ItemElement.prototype.getUnlock
 
 ConsumableElement.prototype.getTags = ItemElement.prototype.getTags;
 
+ConsumableElement.prototype.getUrl = ItemElement.prototype.getUrl;
+
 ConsumableElement.prototype.getCssClass = ItemElement.prototype.getCssClass;
 
 ConsumableElement.prototype.isPillList = function () {
@@ -39,6 +41,7 @@ ConsumableElement.prototype.toJSON = function () {
     pickup: this.getPickup(),
     effects: this.getEffects(),
     tags: this.getTags(),
+    wikiUrl: this.getUrl(),
     _cssClass: this.getCssClass()
   };
 

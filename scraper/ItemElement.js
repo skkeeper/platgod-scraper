@@ -56,6 +56,10 @@ ItemElement.prototype.getTags = function () {
   });
 };
 
+ItemElement.prototype.getUrl = function () {
+  return `https://bindingofisaacrebirth.fandom.com/wiki/${encodeURIComponent(this.element('.item-title').text().replace(/ /g,"_"))}`;
+};
+
 ItemElement.prototype.getCssClass = function () {
   const classes = this.element('a>div').attr('class').split(' ');
   return classes[classes.length - 1];
@@ -70,6 +74,7 @@ ItemElement.prototype.toJSON = function () {
     itemType: this.getItemType(),
     itemPool: this.getItemPool(),
     tags: this.getTags(),
+    wikiUrl: this.getUrl(),
     _cssClass: this.getCssClass()
   };
 
