@@ -18,9 +18,9 @@ TrinketElement.prototype.getUnlockCondition = ItemElement.prototype.getUnlockCon
 
 TrinketElement.prototype.getTags = ItemElement.prototype.getTags;
 
-TrinketElement.prototype.getTags = ItemElement.prototype.getTags;
-
 TrinketElement.prototype.getUrl = ItemElement.prototype.getUrl;
+
+TrinketElement.prototype.getCssClass = ItemElement.prototype.getCssClass;
 
 TrinketElement.prototype.toJSON = function () {
   const json = {
