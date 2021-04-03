@@ -5,7 +5,7 @@ const TrinketElement = function (el) {
 };
 
 TrinketElement.prototype.getTrinketID = function () {
-  return this.element('.r-itemid').text().replace('TrinketID: ', '').trim();
+  return parseInt(this.element('.r-itemid').text().replace('TrinketID: ', '').trim());
 };
 
 TrinketElement.prototype.getTitle = ItemElement.prototype.getTitle;
@@ -18,6 +18,8 @@ TrinketElement.prototype.getUnlockCondition = ItemElement.prototype.getUnlockCon
 
 TrinketElement.prototype.getTags = ItemElement.prototype.getTags;
 
+TrinketElement.prototype.getUrl = ItemElement.prototype.getUrl;
+
 TrinketElement.prototype.getCssClass = ItemElement.prototype.getCssClass;
 
 TrinketElement.prototype.toJSON = function () {
@@ -27,6 +29,7 @@ TrinketElement.prototype.toJSON = function () {
     pickup: this.getPickup(),
     effects: this.getEffects(),
     tags: this.getTags(),
+    wikiUrl: this.getUrl(),
     _cssClass: this.getCssClass()
   };
 

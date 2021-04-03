@@ -102,6 +102,9 @@ module.exports = {
         return this._scrapeItemClass('.boosteritems-container');
       }).then((items) => {
         allItems = allItems.concat(items.map((i) => {i.category = 'BOOSTER_ITEM'; return i;}));
+        return this._scrapeItemClass('.main > *:nth-child(3)');
+      }).then((items) => {
+        allItems = allItems.concat(items.map((i) => {i.category = 'REPENTANCE_ITEM'; return i;}));
         return this._scrapeTrinketClass('.trinkets-container');
       }).then((items) => {
         allItems = allItems.concat(items.map((i) => {i.category = 'REBIRTH_TRINKET'; return i;}));
@@ -114,6 +117,9 @@ module.exports = {
         return this._scrapeTrinketClass('.boostertrinkets-container');
       }).then((items) => {
         allItems = allItems.concat(items.map((i) => {i.category = 'BOOSTER_TRINKET'; return i;}));
+        return this._scrapeTrinketClass('.main > *:nth-child(4)');
+      }).then((items) => {
+        allItems = allItems.concat(items.map((i) => {i.category = 'REPENTANCE_TRINKET'; return i;}));
         return this._scrapeConsumables();
       }).then((items) => {
         resolve(allItems.concat(items.map((i) => {i.category = 'CONSUMABLES'; return i;})));
